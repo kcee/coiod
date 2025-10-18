@@ -4,7 +4,8 @@
     "dependencies": {
         "core": "*",
         "radio": "*",
-        "microphone": "*"
+        "microphone": "*",
+        "powerbrick": "github:kittenbot/pxt-powerbrick#v0.4.2"
     },
     "files": [
         "main.blocks",
