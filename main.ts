@@ -81,6 +81,10 @@ function stop () {
 }
 input.onButtonPressed(Button.A, function () {
     循線左(100, 0, 1)
+    rotaghtleft(80, 750)
+    front(100, 2800)
+    rotaghtleft(80, 700)
+    front(100, 1000)
 })
 function 右內黑 () {
     if (powerbrick.Tracer(powerbrick.Ports.PORT3, powerbrick.Slots.B)) {
@@ -99,7 +103,7 @@ function 循線 (speed: number, time: number) {
             left(speed, 0)
         } else if (左內黑() == 0 && 右內黑() == 1) {
             right(speed, 0)
-        } else if (左內黑() == 1 && 右內黑() == 1) {
+        } else if (左內黑() == 1 && 左外黑() == 1) {
         	
         }
     }
@@ -161,8 +165,8 @@ music.play(music.tonePlayable(262, music.beat(BeatFraction.Whole)), music.Playba
 let color = 0
 m1 = -255
 m2 = -220
-let power = 4
-timefix = Math.map(power, 3.8, 4.2, 1.14, 1)
+let power = 4.2
+timefix = Math.map(power, 3.8, 4.2, 1.14, 0.9)
 basic.forever(function () {
 	
 })
